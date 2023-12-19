@@ -81,3 +81,10 @@ Deliverables documentation:
 5.  STEPS_TAKEN.md
 6.  EXTERNAL_SOURCES.md
 
+To run locally, first run the watermarking script (watermark_image.sh), then
+build the docker image. Currently, there is only one example image, images.jpg,
+so when the docker container is running, test the resizer by opening a browser
+and visiting:
+```
+http://localhost:<PORT>/resizer/image/width=<WIDTH>,height=<HEIGHT>,quality=<QUALITY>/https://s3.example.com/bucket/image.jpg
+```
